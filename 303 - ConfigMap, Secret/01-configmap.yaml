@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  config.yaml: |
+    maxmemory: 2mb
+    db_con: mysql://127.0.0.1:3306?db=example
+kind: ConfigMap
+metadata:
+  name: my-config
+  namespace: my-namespace

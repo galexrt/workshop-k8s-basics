@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+  namespace: my-namespace
+spec:
+  containers:
+  - name: first-container
+    image: fedora:29
+    command:
+      - sleep
+      - "36000"
+    env:
+      - name: SECRET_USERNAME
+        valueFrom:
+          secretKeyRef:
+            name: my-secret
+            key: username
+      - name: SECRET_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            name: my-secret
+            key: password
+    volumeMounts:
+      - name: my-configmap
+        mountPath: /config
+  volumes:
+    - name: my-configmap
+      configMap:
+        name: my-configmap

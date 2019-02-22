@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+  namespace: my-namespace
+spec:
+  containers:
+  - name: first-container
+    image: fedora:29
+    command:
+      - sleep
+      - "36000"
+    env:
+      - name: WHAT_TIME_IS_IT
+        value: "It is workshop time!"
