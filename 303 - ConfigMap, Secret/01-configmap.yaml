@@ -6,4 +6,4 @@ data:
 kind: ConfigMap
 metadata:
   name: my-config
-  namespace: my-namespace
+  namespace: workshop-303

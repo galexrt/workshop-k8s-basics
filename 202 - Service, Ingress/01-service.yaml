@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: my-service
-  namespace: my-namespace
+  namespace: workshop-202
 spec:
   selector:
     app: nginx

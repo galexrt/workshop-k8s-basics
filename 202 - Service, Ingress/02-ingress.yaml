@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: my-ingress
-  namespace: my-namespace
+  namespace: workshop-202
 spec:
   rules:
   - http:
